@@ -22,6 +22,9 @@ public class Assesment1 {
 	private static int userInput = 0;
 
 	public static void Task1() {
+		double start = System.currentTimeMillis();
+// ...
+
 
 		CSVParser csvParser = null;
 		try {
@@ -52,13 +55,15 @@ public class Assesment1 {
 			e.printStackTrace();
 		} finally {
 			closeCsvParser(csvParser);
+			double finish = System.currentTimeMillis();
+			System.out.println((finish - start)/1000 +"seconds");
 
 		}
 
 	}
 
 	public static void Task2() {
-
+		double start = System.currentTimeMillis();
 		CSVParser csvParser = null;
 		try {
 			Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
@@ -89,13 +94,15 @@ public class Assesment1 {
 			e.printStackTrace();
 		} finally {
 			closeCsvParser(csvParser);
+			double finish = System.currentTimeMillis();
+			System.out.println((finish - start)/1000 +"seconds");
 
 		}
 
 	}
 
 	public static void Task3() {
-
+		double start = System.currentTimeMillis();
 		CSVParser csvParser = null;
 		try {
 			Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
@@ -122,10 +129,11 @@ public class Assesment1 {
 				}
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			closeCsvParser(csvParser);
+			double finish = System.currentTimeMillis();
+			System.out.println((finish - start)/1000 +"seconds");
 
 		}
 
@@ -133,6 +141,7 @@ public class Assesment1 {
 
 
 	public static void Task4() throws ParseException {
+		double start = System.currentTimeMillis();
 		CSVParser csvParser = null;
 		try {
 			Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
@@ -251,6 +260,8 @@ public class Assesment1 {
 			e.printStackTrace();
 		} finally {
 			closeCsvParser(csvParser);
+			double finish = System.currentTimeMillis();
+			System.out.println((finish - start)/1000 +"seconds");
 
 		}
 
